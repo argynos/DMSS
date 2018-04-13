@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="WebApp" nsURI="http://www.unex.es/dmss/webapp" nsPrefix="WA">
+  <eClassifiers xsi:type="ecore:EClass" name="WebApp">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="questions" upperBound="-1"
+        eType="#//Question" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entities" lowerBound="1"
+        upperBound="-1" eType="#//Entity" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="webpages" lowerBound="1"
+        upperBound="-1" eType="#//WebPage" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="socialNetworks" upperBound="-1"
+        eType="#//SocialNetwork" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Attribute">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Entity">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="references" upperBound="-1"
+        eType="#//Reference" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" lowerBound="1"
+        upperBound="-1" eType="#//Attribute" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="crud" lowerBound="1" eType="#//CRUD"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="details" eType="#//Details"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="index" eType="#//Index"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="create" eType="#//Create"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="delete" eType="#//Delete"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Reference">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="referendecEntity" lowerBound="1"
+        eType="#//Entity"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Question">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//QuestionType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Answer" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fraction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="visualRep" eType="#//VisualRepresentation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="QuestionType">
+    <eLiterals name="MULTIPLE"/>
+    <eLiterals name="SHORT" value="1"/>
+    <eLiterals name="BOOLEAN" value="2"/>
+    <eLiterals name="LONG" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PageS_Q" abstract="true" eSuperTypes="#//WebPage">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="question" lowerBound="1"
+        upperBound="-1" eType="#//Question"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Survey" eSuperTypes="#//PageS_Q"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="VisualRepresentation">
+    <eLiterals name="BAR_CHART" value="2" literal="BAR_CHART"/>
+    <eLiterals name="LINEAL_CHART" value="3"/>
+    <eLiterals name="PIE_CHART" value="4"/>
+    <eLiterals name="TEXTUAL" value="5"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Questionnary" eSuperTypes="#//PageS_Q">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="feedback" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WebPage" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="links" upperBound="-1"
+        eType="#//Link" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="socialnetwork" lowerBound="1"
+        upperBound="-1" eType="#//SocialNetwork"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Home" eSuperTypes="#//WebPage"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Index" eSuperTypes="#//WebPage"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Details" eSuperTypes="#//WebPage"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Create" eSuperTypes="#//WebPage"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Delete" eSuperTypes="#//WebPage"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CRUD" eSuperTypes="#//WebPage">
+    <eAnnotations source="http://www.obeo.fr/dsl/dnc/archetype">
+      <details key="archetype" value="Role"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Link" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="External" eSuperTypes="#//Link">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Internal" eSuperTypes="#//Link">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="#//WebPage"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SocialNetwork">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+</ecore:EPackage>
