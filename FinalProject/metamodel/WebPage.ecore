@@ -26,7 +26,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="socialNetworks" upperBound="-1"
         eType="#//SocialNetwork" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="quiestions" lowerBound="1"
-        upperBound="-1" eType="#//Quiestion" containment="true"/>
+        upperBound="-1" eType="#//Question" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Attribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -43,7 +43,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="referendecEntity" lowerBound="1"
         eType="#//Entity"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SimpleQuestion" abstract="true" eSuperTypes="#//Quiestion">
+  <eClassifiers xsi:type="ecore:EClass" name="SimpleQuestion" abstract="true" eSuperTypes="#//Question">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//QuestionType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="fraction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -126,9 +126,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="AnsweredQuestion" eSuperTypes="#//SimpleQuestion">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Answer" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Quiestion"/>
-  <eClassifiers xsi:type="ecore:EClass" name="GruopOfQuestions" eSuperTypes="#//Quiestion">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="quiestion" lowerBound="1"
-        upperBound="-1" eType="#//Quiestion" containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Question"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GroupOfQuestions" eSuperTypes="#//Question">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="questions" lowerBound="1"
+        upperBound="-1" eType="#//Question" containment="true"/>
   </eClassifiers>
 </ecore:EPackage>
