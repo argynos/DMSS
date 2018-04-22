@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WA:WebApp xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:WA="http://www.unex.es/dmss/webapp"
+    name="Labs">
+  <webpages
+      xsi:type="WA:Home"
+      name="HOME"
+      internallink="//@webpages.0 //@webpages.1 //@webpages.2 //@webpages.3 //@webpages.4 //@webpages.5">
+    <socialnetwork
+        name="University timeline"/>
+  </webpages>
+  <webpages
+      xsi:type="WA:CRUD"
+      name="Teachers CRUD"
+      entity="//@database/@entities.1">
+    <socialnetwork
+        name="University timeline"/>
+  </webpages>
+  <webpages
+      xsi:type="WA:Index"
+      name="Students Index"
+      entity="//@database/@entities.0">
+    <socialnetwork
+        name="University timeline"/>
+  </webpages>
+  <webpages
+      xsi:type="WA:Details"
+      name="Stundents Details"
+      entity="//@database/@entities.0">
+    <socialnetwork
+        name="University timeline"/>
+  </webpages>
+  <webpages
+      xsi:type="WA:Survey"
+      name="Satisfaction Survey"
+      question="//@questionbank/@quiestions.1">
+    <socialnetwork
+        name="University timeline"/>
+  </webpages>
+  <webpages
+      xsi:type="WA:Questionnary"
+      name="Physics Questionary"
+      question="//@questionbank/@quiestions.0">
+    <socialnetwork
+        name="University timeline"/>
+  </webpages>
+  <database>
+    <entities
+        name="Students">
+      <attributes
+          name="name"
+          type="STRING"/>
+      <attributes
+          name="age"/>
+    </entities>
+    <entities
+        name="Teacher">
+      <attributes
+          name="name"
+          type="STRING"/>
+      <attributes
+          name="subejects"/>
+    </entities>
+  </database>
+  <questionbank>
+    <quiestions
+        xsi:type="WA:GroupOfQuestions"
+        name="Energy Questionnary">
+      <questions
+          xsi:type="WA:TrueFalseForQuestionnay"
+          QuestionText="Energy could be created?"
+          correct="False"/>
+      <questions
+          xsi:type="WA:MultipleForQuestionnary"
+          QuestionText="Unity for energy in IS?"
+          correctOption="//@questionbank/@quiestions.0/@questions.1/@option.1">
+        <option
+            text="meters"/>
+        <option
+            text="joule"
+            fraction="100"/>
+        <option
+            text="kg/m^2"/>
+      </questions>
+      <questions
+          xsi:type="WA:MultipleForQuestionnary"
+          QuestionText="Equation for energy?"
+          correctOption="//@questionbank/@quiestions.0/@questions.2/@option.1">
+        <option
+            text="E=mc"/>
+        <option
+            text="E=mc^2"
+            fraction="100"/>
+        <option
+            text="E=cm^2"/>
+      </questions>
+    </quiestions>
+    <quiestions
+        xsi:type="WA:GroupOfQuestions"
+        name="Teacher Satisfaction Survey">
+      <questions
+          xsi:type="WA:Opened"
+          QuestionText="Name of subject"/>
+      <questions
+          xsi:type="WA:MultipleForSurvey"
+          QuestionText="Satisfaction %">
+        <option
+            text="0-25%"/>
+        <option
+            text="25-50%"/>
+        <option
+            text="50-75%"/>
+        <option
+            text="75-100%"/>
+      </questions>
+      <questions
+          xsi:type="WA:MultipleForSurvey"
+          QuestionText="assistance">
+        <option
+            text="0-25%"/>
+        <option
+            text="25-50%"/>
+        <option
+            text="50-75%"/>
+        <option
+            text="75-100%"/>
+      </questions>
+      <questions
+          xsi:type="WA:TrueFalseForSurvey"
+          QuestionText="Does the teacher answer doubts during the class?"/>
+    </quiestions>
+  </questionbank>
+</WA:WebApp>

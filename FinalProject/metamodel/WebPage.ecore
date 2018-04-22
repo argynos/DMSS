@@ -11,22 +11,26 @@
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="WebApp">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="only_one_home no_isolated_webpages one_survery_and_one_questionary"/>
+      <details key="constraints" value="only_one_home no_isolated_web_pages_from_HOME if_CRUD_no_more_for_entity if_Index_must_be_one_Details if_Details_must_be_one_Index all_pages_will_have_access_external_social_network one_questionnary_and_one_survey_is_needed questions_for_questionary_will_have_associated_correct_answer"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="only_one_home" value="self.webpages->select(w: WebPage | w.oclIsTypeOf(Home))->size()=1"/>
-      <details key="no_isolated_webpages" value="self.webpages.links->select(l: Link | l.oclIsTypeOf(Internal)).oclAsType(Internal).target->includesAll(self.webpages->select(w: WebPage | not w.oclIsTypeOf(Home)) )  "/>
-      <details key="one_survery_and_one_questionary" value="self.webpages->select(w: WebPage | w.oclIsTypeOf(Questionnary))->size()>=1 and self.webpages->select(w: WebPage | w.oclIsTypeOf(Survey))->size()>=1 "/>
+      <details key="only_one_home" value="&#xA;&#x9;&#x9;self.webpages->select(w: WebPage | w.oclIsTypeOf(Home))->size()=1"/>
+      <details key="no_isolated_web_pages_from_HOME" value="&#xA;&#x9;&#x9;self.webpages->select(w: WebPage | w.oclIsTypeOf(Home)).internallink->includesAll(self.webpages->select(w: WebPage | not w.oclIsTypeOf(Home)))"/>
+      <details key="if_CRUD_no_more_for_entity" value="&#xA;&#x9;&#x9;self.webpages->select(w: WebPage | w.oclIsKindOf(EntityWebPage) and not w.oclIsTypeOf(CRUD)).oclAsType(EntityWebPage).entity->excludesAll(self.webpages->select(w: WebPage | w.oclIsTypeOf(CRUD)).oclAsType(CRUD).entity)"/>
+      <details key="if_Index_must_be_one_Details" value="&#xA;&#x9;&#x9;self.webpages->select(w: WebPage | w.oclIsTypeOf(Index)).oclAsType(Index)->forAll(i: Index | self.webpages->select(wd: WebPage| wd.oclIsTypeOf(Details) and wd.oclAsType(Details).entity=i.entity)->size()=1)"/>
+      <details key="if_Details_must_be_one_Index" value="&#xA;&#x9;&#x9;self.webpages->select(w: WebPage | w.oclIsTypeOf(Details)).oclAsType(Details)->forAll(d: Details | self.webpages->select(wi: WebPage| wi.oclIsTypeOf(Index) and wi.oclAsType(Index).entity=d.entity)->size()=1)"/>
+      <details key="all_pages_will_have_access_external_social_network" value="&#xA;&#x9;&#x9;self.webpages->forAll(w: WebPage | w.socialnetwork->size()>0)"/>
+      <details key="one_questionnary_and_one_survey_is_needed" value="&#xA;&#x9;&#x9;self.webpages->select(ws: WebPage | ws.oclIsTypeOf(Survey))->size()>0 and self.webpages->select(wq: WebPage | wq.oclIsTypeOf(Questionnary))->size()>0"/>
+      <details key="questions_for_questionary_will_have_associated_correct_answer"
+          value="&#xA;&#x9;&#x9;self.webpages->select(wq: WebPage | wq.oclIsTypeOf(Questionnary)).oclAsType(Questionnary).question->select(tf: Question | tf.oclIsTypeOf(TrueFalseForSurvey))->size()=0&#xA;&#x9;&#x9;and&#xA;&#x9;&#x9;self.webpages->select(wq: WebPage | wq.oclIsTypeOf(Questionnary)).oclAsType(Questionnary).question->select(m : Question | m.oclIsTypeOf(MultipleForSurvey))->size()=0&#xA;&#x9;&#x9;and&#xA;&#x9;&#x9;self.webpages->select(wq: WebPage | wq.oclIsTypeOf(Questionnary)).oclAsType(Questionnary).question->select(g: Question | g.oclIsTypeOf(GroupOfQuestions)).oclAsType(GroupOfQuestions).questions->select(tf: Question | tf.oclIsTypeOf(TrueFalseForSurvey))->size()=0&#xA;&#x9;&#x9;and&#xA;&#x9;&#x9;self.webpages->select(wq: WebPage | wq.oclIsTypeOf(Questionnary)).oclAsType(Questionnary).question->select(g: Question | g.oclIsTypeOf(GroupOfQuestions)).oclAsType(GroupOfQuestions).questions->select(m: Question | m.oclIsTypeOf(MultipleForSurvey))->size()=0"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="entities" upperBound="-1"
-        eType="#//Entity" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="webpages" lowerBound="1"
         upperBound="-1" eType="#//WebPage" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="socialNetworks" upperBound="-1"
-        eType="#//SocialNetwork" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="quiestions" lowerBound="1"
-        upperBound="-1" eType="#//Question" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="database" lowerBound="1"
+        eType="#//DataBase" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="questionbank" lowerBound="1"
+        eType="#//QuestionBank" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Attribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -34,32 +38,17 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Entity">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="references" upperBound="-1"
-        eType="#//Reference" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" lowerBound="1"
         upperBound="-1" eType="#//Attribute" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Reference">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="referendecEntity" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entityReference" upperBound="-1"
         eType="#//Entity"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SimpleQuestion" abstract="true" eSuperTypes="#//Question">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//QuestionType"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fraction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="visualRep" eType="#//VisualRepresentation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Opened" eSuperTypes="#//SimpleQuestion"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PageS_Q" abstract="true" eSuperTypes="#//WebPage">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="question" lowerBound="1"
+        upperBound="-1" eType="#//Question"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="QuestionType">
-    <eLiterals name="MULTIPLE"/>
-    <eLiterals name="SHORT" value="1"/>
-    <eLiterals name="BOOLEAN" value="2"/>
-    <eLiterals name="LONG" value="3"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PageS_Q" abstract="true" eSuperTypes="#//WebPage"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Survey" eSuperTypes="#//PageS_Q">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="noansweredquestion" lowerBound="1"
-        upperBound="-1" eType="#//NoAnsweredQuestion"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Survey" eSuperTypes="#//PageS_Q"/>
   <eClassifiers xsi:type="ecore:EEnum" name="VisualRepresentation">
     <eLiterals name="BAR_CHART" value="2"/>
     <eLiterals name="LINEAL_CHART" value="3"/>
@@ -68,49 +57,28 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Questionnary" eSuperTypes="#//PageS_Q">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="feedback" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="answered" lowerBound="1"
-        upperBound="-1" eType="#//AnsweredQuestion"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="WebPage" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="links" upperBound="-1"
-        eType="#//Link" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="socialnetwork" upperBound="-1"
-        eType="#//SocialNetwork"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="socialnetwork" lowerBound="1"
+        upperBound="-1" eType="#//SocialNetwork" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="internallink" upperBound="-1"
+        eType="#//WebPage"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="externallinks" upperBound="-1"
+        eType="#//ExternalLink" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Home" eSuperTypes="#//WebPage"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Index" eSuperTypes="#//WebPage">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="entity" lowerBound="1"
-        eType="#//Entity"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Details" eSuperTypes="#//WebPage">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="entity" lowerBound="1"
-        eType="#//Entity"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Create" eSuperTypes="#//WebPage">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="entity" lowerBound="1"
-        eType="#//Entity"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Delete" eSuperTypes="#//WebPage">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="entity" lowerBound="1"
-        eType="#//Entity"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CRUD" eSuperTypes="#//WebPage">
+  <eClassifiers xsi:type="ecore:EClass" name="Index" eSuperTypes="#//EntityWebPage"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Details" eSuperTypes="#//EntityWebPage"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Create" eSuperTypes="#//EntityWebPage"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Delete" eSuperTypes="#//EntityWebPage"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CRUD" eSuperTypes="#//EntityWebPage">
     <eAnnotations source="http://www.obeo.fr/dsl/dnc/archetype">
       <details key="archetype" value="Role"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="entity" lowerBound="1"
-        eType="#//Entity"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Link" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="External" eSuperTypes="#//Link">
+  <eClassifiers xsi:type="ecore:EClass" name="ExternalLink">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Internal" eSuperTypes="#//Link">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
-        eType="#//WebPage"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SocialNetwork">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -122,13 +90,60 @@
     <eLiterals name="DATE" value="3"/>
     <eLiterals name="STRING" value="4"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="NoAnsweredQuestion" eSuperTypes="#//SimpleQuestion"/>
-  <eClassifiers xsi:type="ecore:EClass" name="AnsweredQuestion" eSuperTypes="#//SimpleQuestion">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Answer" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Option">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fraction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Question"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Question" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="GroupOfQuestions" eSuperTypes="#//Question">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="only_one_level_of_group_by"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="only_one_level_of_group_by" value="&#xA;&#x9;&#x9;self.questions->select(g: Question | g.oclIsTypeOf(GroupOfQuestions))->size()=0"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="questions" lowerBound="1"
         upperBound="-1" eType="#//Question" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Multiple" abstract="true" eSuperTypes="#//SimpleQuestion">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="option" lowerBound="2"
+        upperBound="-1" eType="#//Option" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TrueFalse" abstract="true" eSuperTypes="#//SimpleQuestion"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="CorrectAnwser">
+    <eLiterals name="True"/>
+    <eLiterals name="False" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SimpleQuestion" abstract="true" eSuperTypes="#//Question">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="QuestionText" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="visualRep" eType="#//VisualRepresentation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EntityWebPage" abstract="true" eSuperTypes="#//WebPage">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entity" lowerBound="1"
+        eType="#//Entity"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataBase">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entities" upperBound="-1"
+        eType="#//Entity" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="QuestionBank">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="quiestions" lowerBound="1"
+        upperBound="-1" eType="#//Question" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TrueFalseForSurvey" eSuperTypes="#//TrueFalse"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MultipleForSurvey" eSuperTypes="#//Multiple"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TrueFalseForQuestionnay" eSuperTypes="#//TrueFalse">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="correct" eType="#//CorrectAnwser"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MultipleForQuestionnary" eSuperTypes="#//Multiple">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="correct_from_own_options"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="correct_from_own_options" value="&#xA;&#x9;&#x9;self.option->includes(self.correctOption)"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="correctOption" lowerBound="1"
+        eType="#//Option"/>
   </eClassifiers>
 </ecore:EPackage>
