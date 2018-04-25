@@ -48,7 +48,8 @@
   </webpages>
   <database>
     <entities
-        name="Students">
+        name="Students"
+        entityReference="//@database/@entities.1">
       <attributes
           name="name"
           type="STRING"/>
