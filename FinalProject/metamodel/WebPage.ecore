@@ -61,7 +61,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="WebPage" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="socialnetwork" lowerBound="1"
-        upperBound="-1" eType="#//SocialNetwork" containment="true"/>
+        upperBound="-1" eType="#//ExternalSource" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="internallink" upperBound="-1"
         eType="#//WebPage"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="externallinks" upperBound="-1"
@@ -80,7 +80,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="ExternalLink">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SocialNetwork">
+  <eClassifiers xsi:type="ecore:EClass" name="ExternalSource">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="MySqlType">
@@ -116,7 +116,8 @@
     <eLiterals name="False" value="1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SimpleQuestion" abstract="true" eSuperTypes="#//Question">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="QuestionText" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="QuestionText" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="visualRep" eType="#//VisualRepresentation"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EntityWebPage" abstract="true" eSuperTypes="#//WebPage">

@@ -57,6 +57,12 @@
           <backgroundColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           <foregroundColor xmi:type="description:UserFixedColor" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@userColorsPalettes[name='Ecore%20Palette']/@entries[name='RoleColor']"/>
         </computedStyleDescriptions>
+        <computedStyleDescriptions xmi:type="style:BundledImageDescription" xmi:id="_beafoElCEeiM_bKk5XhQPA" labelExpression="service:render" labelAlignment="LEFT" tooltipExpression="service:renderTooltip" sizeComputationExpression="1">
+          <borderColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <labelFormat>bold</labelFormat>
+          <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <color xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+        </computedStyleDescriptions>
       </data>
     </ownedAnnotationEntries>
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_GE-24D5gEeiMadi-Sz6Itw" source="GMF_DIAGRAMS">
@@ -1260,9 +1266,9 @@
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_3yIxcD5hEeiMadi-Sz6Itw" name="SocialNetwork" tooltipText="" incomingEdges="_1Ea4kESkEeiUQ52Zp0t0DQ" width="12" height="10">
-      <target xmi:type="ecore:EClass" href="WebPage.ecore#//SocialNetwork"/>
-      <semanticElements xmi:type="ecore:EClass" href="WebPage.ecore#//SocialNetwork"/>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_3yIxcD5hEeiMadi-Sz6Itw" name="ExternalSource" tooltipText="" incomingEdges="_1Ea4kESkEeiUQ52Zp0t0DQ" width="12" height="10">
+      <target xmi:type="ecore:EClass" href="WebPage.ecore#//ExternalSource"/>
+      <semanticElements xmi:type="ecore:EClass" href="WebPage.ecore#//ExternalSource"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -1271,8 +1277,8 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
       <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_N8lrUD5rEeiMadi-Sz6Itw" name="name : EString" tooltipText="">
-        <target xmi:type="ecore:EAttribute" href="WebPage.ecore#//SocialNetwork/name"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="WebPage.ecore#//SocialNetwork/name"/>
+        <target xmi:type="ecore:EAttribute" href="WebPage.ecore#//ExternalSource/name"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="WebPage.ecore#//ExternalSource/name"/>
         <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_OVUUYT5rEeiMadi-Sz6Itw" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
         </ownedStyle>
@@ -1601,8 +1607,8 @@
       <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_dNZygEMXEeivGeOCY1ri_w" name="QuestionText : EString" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="WebPage.ecore#//SimpleQuestion/QuestionText"/>
         <semanticElements xmi:type="ecore:EAttribute" href="WebPage.ecore#//SimpleQuestion/QuestionText"/>
-        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_dNaZkEMXEeivGeOCY1ri_w" labelAlignment="LEFT">
-          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_bebGsElCEeiM_bKk5XhQPA" labelAlignment="LEFT" description="_beafoElCEeiM_bKk5XhQPA">
+          <labelFormat>bold</labelFormat>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
