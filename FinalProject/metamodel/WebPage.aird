@@ -1015,8 +1015,8 @@
       <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_ICN_oD5gEeiMadi-Sz6Itw" name="name : EString" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="WebPage.ecore#//WebApp/name"/>
         <semanticElements xmi:type="ecore:EAttribute" href="WebPage.ecore#//WebApp/name"/>
-        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_Ini6QD5gEeiMadi-Sz6Itw" labelAlignment="LEFT">
-          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_seAnoGNJEei1VM-uAiCMOw" labelAlignment="LEFT" description="_beafoElCEeiM_bKk5XhQPA">
+          <labelFormat>bold</labelFormat>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
@@ -1034,16 +1034,16 @@
       <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_LIRKkD5gEeiMadi-Sz6Itw" name="name : EString" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="WebPage.ecore#//Attribute/name"/>
         <semanticElements xmi:type="ecore:EAttribute" href="WebPage.ecore#//Attribute/name"/>
-        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_MDSoYD5gEeiMadi-Sz6Itw" labelAlignment="LEFT">
-          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_pn1rwGNJEei1VM-uAiCMOw" labelAlignment="LEFT" description="_beafoElCEeiM_bKk5XhQPA">
+          <labelFormat>bold</labelFormat>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
       <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_MiLj0D5gEeiMadi-Sz6Itw" name="type : MySqlType = INTEGER" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="WebPage.ecore#//Attribute/type"/>
         <semanticElements xmi:type="ecore:EAttribute" href="WebPage.ecore#//Attribute/type"/>
-        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_NWDQwD5gEeiMadi-Sz6Itw" labelAlignment="LEFT">
-          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_qP9bsGNJEei1VM-uAiCMOw" labelAlignment="LEFT" description="_beafoElCEeiM_bKk5XhQPA">
+          <labelFormat>bold</labelFormat>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
@@ -1061,8 +1061,8 @@
       <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_PVLP4D5gEeiMadi-Sz6Itw" name="name : EString" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="WebPage.ecore#//Entity/name"/>
         <semanticElements xmi:type="ecore:EAttribute" href="WebPage.ecore#//Entity/name"/>
-        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_P3MX0D5gEeiMadi-Sz6Itw" labelAlignment="LEFT">
-          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_r4VHsGNJEei1VM-uAiCMOw" labelAlignment="LEFT" description="_beafoElCEeiM_bKk5XhQPA">
+          <labelFormat>bold</labelFormat>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
@@ -1157,8 +1157,8 @@
       <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_5Cqy8D5mEeiMadi-Sz6Itw" name="feedback : EBoolean = false" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="WebPage.ecore#//Questionnary/feedback"/>
         <semanticElements xmi:type="ecore:EAttribute" href="WebPage.ecore#//Questionnary/feedback"/>
-        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_7agNAT5mEeiMadi-Sz6Itw" labelAlignment="LEFT">
-          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_zAA8EGNJEei1VM-uAiCMOw" labelAlignment="LEFT" description="_beafoElCEeiM_bKk5XhQPA">
+          <labelFormat>bold</labelFormat>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
@@ -1177,8 +1177,8 @@
       <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_M_YAsD5hEeiMadi-Sz6Itw" name="name : EString" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="WebPage.ecore#//WebPage/name"/>
         <semanticElements xmi:type="ecore:EAttribute" href="WebPage.ecore#//WebPage/name"/>
-        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_NWIT0D5hEeiMadi-Sz6Itw" labelAlignment="LEFT">
-          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_0lyAAGNJEei1VM-uAiCMOw" labelAlignment="LEFT" description="_beafoElCEeiM_bKk5XhQPA">
+          <labelFormat>bold</labelFormat>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
@@ -1260,8 +1260,8 @@
       <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_oGQucD5hEeiMadi-Sz6Itw" name="url : EString" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="WebPage.ecore#//ExternalLink/url"/>
         <semanticElements xmi:type="ecore:EAttribute" href="WebPage.ecore#//ExternalLink/url"/>
-        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_omnCcD5hEeiMadi-Sz6Itw" labelAlignment="LEFT">
-          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_1ghJ8GNJEei1VM-uAiCMOw" labelAlignment="LEFT" description="_beafoElCEeiM_bKk5XhQPA">
+          <labelFormat>bold</labelFormat>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
@@ -1279,8 +1279,8 @@
       <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_N8lrUD5rEeiMadi-Sz6Itw" name="name : EString" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="WebPage.ecore#//ExternalSource/name"/>
         <semanticElements xmi:type="ecore:EAttribute" href="WebPage.ecore#//ExternalSource/name"/>
-        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_OVUUYT5rEeiMadi-Sz6Itw" labelAlignment="LEFT">
-          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_z7fs4GNJEei1VM-uAiCMOw" labelAlignment="LEFT" description="_beafoElCEeiM_bKk5XhQPA">
+          <labelFormat>bold</labelFormat>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
@@ -1445,16 +1445,16 @@
       <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_ZddbcD_1Eei3Zs93GvA_Fg" name="text : EString" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="WebPage.ecore#//Option/text"/>
         <semanticElements xmi:type="ecore:EAttribute" href="WebPage.ecore#//Option/text"/>
-        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_aejFAD_1Eei3Zs93GvA_Fg" labelAlignment="LEFT">
-          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_xg-LMGNJEei1VM-uAiCMOw" labelAlignment="LEFT" description="_beafoElCEeiM_bKk5XhQPA">
+          <labelFormat>bold</labelFormat>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
       <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_D0buIEFhEeiQ08RW28EI7A" name="fraction : EInt" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="WebPage.ecore#//Option/fraction"/>
         <semanticElements xmi:type="ecore:EAttribute" href="WebPage.ecore#//Option/fraction"/>
-        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_E4RwwEFhEeiQ08RW28EI7A" labelAlignment="LEFT">
-          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_yF1LwGNJEei1VM-uAiCMOw" labelAlignment="LEFT" description="_beafoElCEeiM_bKk5XhQPA">
+          <labelFormat>bold</labelFormat>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
@@ -1484,8 +1484,8 @@
       <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_0Q58oEMSEeivGeOCY1ri_w" name="name : EString" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="WebPage.ecore#//GroupOfQuestions/name"/>
         <semanticElements xmi:type="ecore:EAttribute" href="WebPage.ecore#//GroupOfQuestions/name"/>
-        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_jom4MEMTEeivGeOCY1ri_w" labelAlignment="LEFT">
-          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_v_mfEGNJEei1VM-uAiCMOw" labelAlignment="LEFT" description="_beafoElCEeiM_bKk5XhQPA">
+          <labelFormat>bold</labelFormat>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
@@ -1870,9 +1870,9 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_nip4gESrEeiUQ52Zp0t0DQ" name="TrueFalseForQuestionnay" tooltipText="" outgoingEdges="_wPgT4ESrEeiUQ52Zp0t0DQ" width="12" height="10">
-      <target xmi:type="ecore:EClass" href="WebPage.ecore#//TrueFalseForQuestionnay"/>
-      <semanticElements xmi:type="ecore:EClass" href="WebPage.ecore#//TrueFalseForQuestionnay"/>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_nip4gESrEeiUQ52Zp0t0DQ" name="TrueFalseForQuestionnary" tooltipText="" outgoingEdges="_wPgT4ESrEeiUQ52Zp0t0DQ" width="12" height="10">
+      <target xmi:type="ecore:EClass" href="WebPage.ecore#//TrueFalseForQuestionnary"/>
+      <semanticElements xmi:type="ecore:EClass" href="WebPage.ecore#//TrueFalseForQuestionnary"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -1881,10 +1881,10 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
       <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_qAKcwESrEeiUQ52Zp0t0DQ" name="correct : CorrectAnwser = True" tooltipText="">
-        <target xmi:type="ecore:EAttribute" href="WebPage.ecore#//TrueFalseForQuestionnay/correct"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="WebPage.ecore#//TrueFalseForQuestionnay/correct"/>
-        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_qALD0ESrEeiUQ52Zp0t0DQ" labelAlignment="LEFT">
-          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+        <target xmi:type="ecore:EAttribute" href="WebPage.ecore#//TrueFalseForQuestionnary/correct"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="WebPage.ecore#//TrueFalseForQuestionnary/correct"/>
+        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_wwLncGNJEei1VM-uAiCMOw" labelAlignment="LEFT" description="_beafoElCEeiM_bKk5XhQPA">
+          <labelFormat>bold</labelFormat>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
@@ -1902,8 +1902,8 @@
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_wPgT4ESrEeiUQ52Zp0t0DQ" sourceNode="_nip4gESrEeiUQ52Zp0t0DQ" targetNode="_LayJoEMQEeivGeOCY1ri_w">
-      <target xmi:type="ecore:EClass" href="WebPage.ecore#//TrueFalseForQuestionnay"/>
-      <semanticElements xmi:type="ecore:EGenericType" href="WebPage.ecore#//TrueFalseForQuestionnay/@eGenericSuperTypes.0"/>
+      <target xmi:type="ecore:EClass" href="WebPage.ecore#//TrueFalseForQuestionnary"/>
+      <semanticElements xmi:type="ecore:EGenericType" href="WebPage.ecore#//TrueFalseForQuestionnary/@eGenericSuperTypes.0"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_wPg68ESrEeiUQ52Zp0t0DQ" targetArrow="InputClosedArrow" routingStyle="tree">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']/@style"/>
         <beginLabelStyle xmi:type="diagram:BeginLabelStyle" xmi:id="_wPg68USrEeiUQ52Zp0t0DQ" showIcon="false">
