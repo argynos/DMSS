@@ -70,7 +70,7 @@
         xsi:type="WA:GroupOfQuestions"
         name="Energy Questionnary">
       <questions
-          xsi:type="WA:TrueFalseForQuestionnay"
+          xsi:type="WA:TrueFalseForQuestionnary"
           QuestionText="Energy could be created?"
           correct="False"/>
       <questions
