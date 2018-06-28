@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="WebApp" nsURI="http://www.unex.es/dmss/webapp" nsPrefix="WA">
+  <eAnnotations source="MyDSLDoc">
+    <details key="Author" value="Sergio Fernandez Rincon"/>
+    <details key="Last Updated" value="06/26/2018"/>
+  </eAnnotations>
   <eAnnotations source="http://www.eclipse.org/OCL/Import">
     <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
   </eAnnotations>
@@ -10,6 +14,9 @@
     <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="WebApp">
+    <eAnnotations source="MyDSLDoc">
+      <details key="Description" value="This is the Root element where all starts"/>
+    </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="only_one_home no_isolated_web_pages_from_HOME if_CRUD_no_more_for_entity if_Index_must_be_one_Details if_Details_must_be_one_Index all_pages_will_have_access_external_social_network one_questionnary_and_one_survey_is_needed questions_for_questionary_will_have_associated_correct_answer surveys_only_have_only_multiplequestionforsurvey_or_truefalseforsurvey_or_openend"/>
     </eAnnotations>
@@ -27,6 +34,9 @@
           value="&#xA;&#x9;&#x9;self.webpages->select(wq: WebPage | wq.oclIsTypeOf(Survey)).oclAsType(Survey).question->select(tf: Question | tf.oclIsTypeOf(TrueFalseForQuestionnary))->size()=0&#xA;&#x9;&#x9;and&#xA;&#x9;&#x9;self.webpages->select(wq: WebPage | wq.oclIsTypeOf(Survey)).oclAsType(Survey).question->select(m : Question | m.oclIsTypeOf(MultipleForQuestionnary))->size()=0&#xA;&#x9;&#x9;and&#xA;&#x9;&#x9;self.webpages->select(wq: WebPage | wq.oclIsTypeOf(Survey)).oclAsType(Survey).question->select(g: Question | g.oclIsTypeOf(GroupOfQuestions)).oclAsType(GroupOfQuestions).questions->select(tf: Question | tf.oclIsTypeOf(TrueFalseForQuestionnary))->size()=0&#xA;&#x9;&#x9;and&#xA;&#x9;&#x9;self.webpages->select(wq: WebPage | wq.oclIsTypeOf(Survey)).oclAsType(Survey).question->select(g: Question | g.oclIsTypeOf(GroupOfQuestions)).oclAsType(GroupOfQuestions).questions->select(m: Question | m.oclIsTypeOf(MultipleForQuestionnary))->size()=0"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="User" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Password" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="webpages" lowerBound="1"
         upperBound="-1" eType="#//WebPage" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="database" lowerBound="1"
@@ -35,10 +45,16 @@
         eType="#//QuestionBank" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Attribute">
+    <eAnnotations source="MyDSLDoc">
+      <details key="Description" value="This is an attribute of an Entity"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//MySqlType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Entity">
+    <eAnnotations source="MyDSLDoc">
+      <details key="Description" value="Entity of the DataBase"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" lowerBound="1"
         upperBound="-1" eType="#//Attribute" containment="true"/>
@@ -87,11 +103,11 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="MySqlType">
-    <eLiterals name="INTEGER"/>
+    <eLiterals name="INT"/>
     <eLiterals name="REAL" value="1"/>
     <eLiterals name="BOOLEAN" value="2"/>
     <eLiterals name="DATE" value="3"/>
-    <eLiterals name="STRING" value="4"/>
+    <eLiterals name="VARCHAR" value="4" literal="VARCHAR(50)"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Option">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

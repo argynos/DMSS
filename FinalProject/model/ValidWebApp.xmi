@@ -52,7 +52,7 @@
         entityReference="//@database/@entities.1">
       <attributes
           name="name"
-          type="STRING"/>
+          type="VARCHAR(50)"/>
       <attributes
           name="age"/>
     </entities>
@@ -60,7 +60,7 @@
         name="Teacher">
       <attributes
           name="name"
-          type="STRING"/>
+          type="VARCHAR(50)"/>
       <attributes
           name="subejects"/>
     </entities>
