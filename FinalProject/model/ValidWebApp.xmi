@@ -9,42 +9,54 @@
       name="HOME"
       internallink="//@webpages.0 //@webpages.1 //@webpages.2 //@webpages.3 //@webpages.4 //@webpages.5">
     <socialnetwork
-        name="University timeline"/>
+        xsi:type="WA:RSSFeed"
+        url="http://digital.unex.es/drupal/?q=rss.xml"
+        items_to_display="5"
+        show_date="true"
+        feedname="unex"/>
   </webpages>
   <webpages
       xsi:type="WA:CRUD"
       name="Teachers CRUD"
       entity="//@database/@entities.1">
     <socialnetwork
-        name="University timeline"/>
+        xsi:type="WA:Twitter"
+        username="dmss_uex"/>
   </webpages>
   <webpages
       xsi:type="WA:Index"
       name="Students Index"
       entity="//@database/@entities.0">
-    <socialnetwork
-        name="University timeline"/>
+    <externallinks
+        url="dmss_uex"/>
   </webpages>
   <webpages
       xsi:type="WA:Details"
       name="Stundents Details"
       entity="//@database/@entities.0">
     <socialnetwork
-        name="University timeline"/>
+        xsi:type="WA:Twitter"
+        username="dmss_uex"/>
   </webpages>
   <webpages
       xsi:type="WA:Survey"
       name="Satisfaction Survey"
       question="//@questionbank/@quiestions.1">
     <socialnetwork
-        name="University timeline"/>
+        xsi:type="WA:RSSFeed"
+        url="http://digital.unex.es/drupal/?q=rss.xml"
+        show_date="true"
+        feedname="unex"/>
   </webpages>
   <webpages
       xsi:type="WA:Questionnary"
       name="Physics Questionary"
       question="//@questionbank/@quiestions.0">
     <socialnetwork
-        name="University timeline"/>
+        xsi:type="WA:RSSFeed"
+        url="http://digital.unex.es/drupal/?q=rss.xml"
+        show_date="true"
+        feedname="unex"/>
   </webpages>
   <database>
     <entities
