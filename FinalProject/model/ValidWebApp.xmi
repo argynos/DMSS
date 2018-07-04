@@ -32,7 +32,7 @@
   </webpages>
   <webpages
       xsi:type="WA:Details"
-      name="Stundents Details"
+      name="Students Details"
       entity="//@database/@entities.0">
     <socialnetwork
         xsi:type="WA:Twitter"
@@ -69,7 +69,7 @@
           name="age"/>
     </entities>
     <entities
-        name="Teacher">
+        name="Teachers">
       <attributes
           name="name"
           type="VARCHAR(50)"/>
@@ -144,5 +144,8 @@
           xsi:type="WA:TrueFalseForSurvey"
           QuestionText="Does the teacher answer doubts during the class?"/>
     </quiestions>
+    <quiestions
+        xsi:type="WA:Opened"
+        QuestionText="Comments"/>
   </questionbank>
 </WA:WebApp>
